@@ -1,0 +1,185 @@
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+
+    &.dark-mode {
+        background-color: $black-bg;
+
+        ::selection {
+            background: $blue-bg;
+        }
+
+        body {
+            color: $text-gray;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            margin: 0 auto;
+        }
+
+        #page-header {
+
+            nav.mode ul li.toggle {
+                fill: $teal;
+            }
+
+            nav.primary-nav ul li {
+            
+                a {
+                    color: $text-gray;
+                }
+            }
+        }
+    }
+
+    &.light-mode {
+        background-color: $gray-bg;
+
+        ::selection {
+            background: $white-bg;
+        }
+
+        body {
+            color: $text-black;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            margin: 0 auto;
+        }
+
+        .toggle {
+            fill: $orange;
+        }
+    }
+}
+
+body, button, input, select, textarea {
+    font-family: $font-bio;
+    font-size: $font-size;
+    line-height: $font-lead;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, p, ul, ol {
+    margin-top: 0;
+}
+
+h1, .h1 {
+    font-family: $font-ironstrike;
+    font-size: rem(96);
+    font-weight: 800;
+    line-height: 100%;
+}
+
+h2, .h2 {
+    font-family: $font-ironstrike;
+    font-size: rem(48);
+    font-weight: 800;
+    line-height: 100%;
+}
+
+h3, .h3 {
+    font-family: $font-bio;
+    font-size: rem(24);
+    font-weight: 800;
+}
+
+h4, .h4 {
+    font-family: $font-bio;
+    font-size: rem(18);
+    font-weight: 800;
+}
+
+p, ul, ol {
+    font-size: rem(16);
+}
+
+ul.menu {
+    align-items: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1220px;
+    padding: 0 40px;
+}
+
+#page-header {
+
+    .container {
+        align-items: flex-start;
+        display: flex;
+        position: relative;
+    }
+
+    .logo {
+        padding-top: 96px;
+        padding-bottom: 96px;
+
+        img {
+            max-width: 450px;
+        }
+    }
+
+    .menu-container {
+        align-items: center;
+        display: flex;
+        position: absolute;
+        right: 48px;
+        top: 24px;
+
+        nav.mode {
+            
+            ul.menu {
+
+                li {
+                    cursor: pointer;
+                    margin-left: 12px;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &:not(.active) {
+
+                        svg {
+                            opacity: .4;
+                        }
+                    }
+
+                    svg {
+                        max-width: 20px;
+                    }
+                }
+            }
+        }
+
+        nav.primary-nav {
+
+            ul.menu {
+
+                li {
+                    margin: 0 12px;
+
+                    &.contact {
+                        margin-left: 24px;
+                    }
+
+                    a {
+                        line-height: 1;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
+

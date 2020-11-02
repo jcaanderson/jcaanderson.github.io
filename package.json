@@ -1,0 +1,18 @@
+{
+  "name": "jessanderson.me",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jcaanderson/jcaanderson.github.io.git",
+  "author": "Jess Anderson <jessanderson001@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "node-normalize-scss": "^8.1.2"
+  },
+  "scripts": {}
+}
